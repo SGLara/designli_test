@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "bmewburn.vscode-intelephense-client",
+        "m1guelpf.better-pest",
+        "editorconfig.editorconfig",
+        "mehedidracula.php-namespace-resolver",
+        "neilbrayfield.php-docblocker",
+        "sanderronde.phpstan-vscode",
+        "usernamehw.errorlens",
+    ]
+}

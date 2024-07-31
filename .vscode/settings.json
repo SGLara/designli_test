@@ -1,0 +1,15 @@
+{
+    "namespaceResolver.sortOnSave": true,
+    "namespaceResolver.sortNatural": true,
+    "namespaceResolver.sortAlphabetically": true,
+    "files.eol": "\n",
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning",
+        "info",
+        // "hint"
+    ],
+    "phpstan.binPath": "./vendor/bin/phpstan",
+    "phpstan.timeout": 9999999,
+    "phpstan.memoryLimit": "-1",
+}
