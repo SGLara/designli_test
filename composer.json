@@ -11,7 +11,7 @@
         "php": "^7.3|^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "json-mapper/json-mapper": "*",
+        "json-mapper/laravel-package": "^2.5",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5"
@@ -23,8 +23,10 @@
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^5.10",
+        "nunomaduro/larastan": "^1.0",
         "pestphp/pest": "^1.23",
-        "phpstan/phpstan": "^1.11"
+        "phpstan/phpstan": "^1.11",
+        "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
         "psr-4": {

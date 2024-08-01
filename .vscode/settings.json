@@ -1,4 +1,8 @@
 {
+    "[php]": {
+        "editor.defaultFormatter": "open-southeners.laravel-pint",
+        "editor.formatOnSave": true
+    },
     "namespaceResolver.sortOnSave": true,
     "namespaceResolver.sortNatural": true,
     "namespaceResolver.sortAlphabetically": true,
@@ -9,7 +13,11 @@
         "info",
         // "hint"
     ],
+    "phpstan.enabled": false,
     "phpstan.binPath": "./vendor/bin/phpstan",
     "phpstan.timeout": 9999999,
     "phpstan.memoryLimit": "-1",
+    "phpcs.enable": true,
+    "phpcs.standard": "PSR2",
+    "phpcs.executablePath": "./vendor/bin/phpcs",
 }
