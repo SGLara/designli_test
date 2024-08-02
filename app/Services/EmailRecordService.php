@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Classes\Ses;
+
 class EmailRecordService
 {
     public $eventVersion;
