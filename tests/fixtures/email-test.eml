@@ -1,0 +1,184 @@
+Delivered-To: steven.gustavo.lara@gmail.com
+Received: by 2002:a05:6f02:8609:b0:6f:e095:250a with SMTP id j9csp1400670rch;
+        Thu, 1 Aug 2024 16:51:56 -0700 (PDT)
+X-Received: by 2002:a05:6102:4408:b0:493:c95b:4c15 with SMTP id ada2fe7eead31-4945bc0fa86mr2704053137.0.1722556315737;
+        Thu, 01 Aug 2024 16:51:55 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1722556315; cv=none;
+        d=google.com; s=arc-20160816;
+        b=u1gEd7YhjodXWah4yCchqwhJPbEFfBIcFNbZKn5cNM/O1Z9GpNBYxubgzgRoZhHfKA
+         M/aQ/lFJHjWiLzTSw7hCrztceY/u5+/R7sFICuh9dFK3D5DPDlXE1vw9fUf9VCR1Zt/i
+         TZ/kJFRc66nV4c48a7n78IUJO0M8PO5Z8soDp4mktlvDS4V3aOIGD8hqQpnM/vhBg08K
+         zP7+o1/rGSMNzefHXrkGADSxjoKBsvlJlA/UEpI7PFRm1mvDm5MRlyE8rq5CN941s7Kn
+         hwXLWQ8wJaU75d7JjfLMwHZG4yKHzXZzGdB69AohNEOVfrmRoFnhJ0yFL4n+B8z6fIvl
+         JcVw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:from:date:dkim-signature;
+        bh=VtjTTjAR5b3i27JLQzsniSI/gSfOnhjwnscoqf1W1pA=;
+        fh=00NCcTF9SYZDSthAdENCdzGZBTwlaVIZu5EjXiFFQv4=;
+        b=XblAimrgM5pBSXjQiAOBnltwv1IrAgAYbU9mldwtwcflhVqL9c+Wm2d31ymkrY5QTX
+         fsZU5S0b/zOWj5kTfg8XjjxHDNkh7B7i51qP58RFJYMDovZBvTXygaVOm6m4pu24h4Ap
+         7jkLM2s8KdUr9QNHSrluqXjU05l1VFCGQ/EvplLmUKTOOWw/O8BdjCgZHgFdwWjwTYJQ
+         7oMS4b01JsjKqBczYAFiAf8ZeUV8KpGCt3jqzznC4B1LFeFP8W7JF4ezqWVrSRXnukzc
+         sx5+aYkZdP67DBDNKLjnzlPQ5IcPClo9rtvphvJ4qXEhNzw1kHu1Gf00GKMX1dREZCVa
+         Ycvg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=bEtfxek+;
+       spf=pass (google.com: domain of steven.carcamo2019adoc@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=steven.carcamo2019adoc@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <steven.carcamo2019adoc@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a1e0cc1a2514c-83c0a00d3e4sor98122241.7.2024.08.01.16.51.55
+        for <steven.gustavo.lara@gmail.com>
+        (Google Transport Security);
+        Thu, 01 Aug 2024 16:51:55 -0700 (PDT)
+Received-SPF: pass (google.com: domain of steven.carcamo2019adoc@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=bEtfxek+;
+       spf=pass (google.com: domain of steven.carcamo2019adoc@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=steven.carcamo2019adoc@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1722556315; x=1723161115; dara=google.com;
+        h=mime-version:subject:message-id:to:from:date:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=VtjTTjAR5b3i27JLQzsniSI/gSfOnhjwnscoqf1W1pA=;
+        b=bEtfxek+OEkCjtEhESF8qsAlT/4Fdeg6DfZCnQ9SW4vjgfzoeWyvxKGd+0AFlREAnl
+         P/iHpbOWC2Pik3uTByOwL5NkeNW/fjKVQ/1ROMuEyXSpKQpwS9h8mSilE55Zc1tzsgoZ
+         bcgjmDTuKzuvHtG3Wd06eEp0WIGxqxdT4xIZqN5cW72b0Yd7cuF7d1n5ELWySxCdULcM
+         xV2yGIj5JlOCw0FmiYGbtkVAQp91SvdN9gyU0CNaNykRSMZfHo0W1zJ1yEGthT8qymgW
+         fRaQlPnq617QX32U5p8vFxDIBRIvGAXhsmlbm4/uQ6Rgj7Wlz0Yd70QO7NOLhq6memPC
+         P+BA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1722556315; x=1723161115;
+        h=mime-version:subject:message-id:to:from:date:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=VtjTTjAR5b3i27JLQzsniSI/gSfOnhjwnscoqf1W1pA=;
+        b=dikAcK519qzsFwPahywtxHtPF/+hQnBxD+syGzz0hsudbkNYYysnBnPaifLiSsKeBA
+         ksoQfQkTamtdBgRE1SlOpmsGWnYtgb2bre8JkxO8Bf27zxb/JsiV6PAcr1zThk7Y9mpV
+         ZzoHB5rGWGmBofz2FZ+kHG4T3l5xWQqFfd1zASLDLlB8Rc/9PFyToOhzWQQNRsxLBeZp
+         1ctoJUwGAaSKkgpTgqVIUvGHpAOpLQKAFJfqsT8qDUcVy2I3iccHb0bqbkirVCLZKvpN
+         0gm65pqPLo4Vz1lsxgjVBhqxeeVhM3691dz7DKVLahjheye3hHy5nc1VlZo8iXXEmdF9
+         Vh5Q==
+X-Gm-Message-State: AOJu0Yxud5TU7CP+uaAUfezYHZ7i7hFrBeJfwSQfrih0g6j/MWCeU2ln
+	uwt3osThtdlCuI2xjW792L5mS/CmJD3XWyaAYyhSUPjlb0hQCHD2w5pkDg==
+X-Google-Smtp-Source: AGHT+IGc3YYudVmU4Hncy0cZgW7VfgBinxQpGfMpY8ugSUVewdG+QFop+sx/2wqYH1UxmWnkMunRHg==
+X-Received: by 2002:a05:6122:915:b0:4f5:27ac:ce85 with SMTP id 71dfb90a1353d-4f89ff1802fmr2529512e0c.3.1722556314832;
+        Thu, 01 Aug 2024 16:51:54 -0700 (PDT)
+Return-Path: <steven.carcamo2019adoc@gmail.com>
+Received: from Stevens-MacBook-Pro.local ([186.32.86.140])
+        by smtp.gmail.com with ESMTPSA id 71dfb90a1353d-4f8a1a340besm119724e0c.2.2024.08.01.16.51.53
+        for <steven.gustavo.lara@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 01 Aug 2024 16:51:53 -0700 (PDT)
+Date: Thu, 1 Aug 2024 17:51:52 -0600
+From: Steven Gustavo Lara <steven.carcamo2019adoc@gmail.com>
+To: "=?utf-8?Q?steven.gustavo.lara=40gmail.com?="
+ <steven.gustavo.lara@gmail.com>
+Message-ID: <BCEAF62C-C1E2-4E2C-AC7E-A857A7C08D97@getmailspring.com>
+Subject: Test Json Designli Email
+X-Mailer: Mailspring
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="66ac1f98_327b23c6_10290"
+
+--66ac1f98_327b23c6_10290
+Content-Type: multipart/alternative; boundary="66ac1f98_6b8b4567_10290"
+
+--66ac1f98_6b8b4567_10290
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Hello Test!
+
+Here I attached the file
+--66ac1f98_6b8b4567_10290
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+<div>Hello Test=21</div><br><div>Here I attached the file</div><img class=
+=3D=22mailspring-open=22 alt=3D=22Sent from Mailspring=22 width=3D=220=22=
+ height=3D=220=22 style=3D=22border:0; width:0; height:0;=22 src=3D=22htt=
+ps://link.getmailspring.com/open/BCEA=4662C-C1E2-4E2C-AC7E-A857A7C08D97=40=
+getmailspring.com=3Fme=3Df402fe2c&amp;recipient=3Dc3RldmVuLmd1c3Rhdm8ubG=46=
+yYUBnbW=46pbC5jb20%3D=22>
+--66ac1f98_6b8b4567_10290--
+
+--66ac1f98_327b23c6_10290
+Content-Type: application/json
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Ses Sns Event.json"
+
+ewogICJSZWNvcmRzIjogWwogICAgewogICAgICAiZXZlbnRWZXJzaW9uIjogIjEuMCIsCiAgICAg
+ICJzZXMiOiB7CiAgICAgICAgInJlY2VpcHQiOiB7CiAgICAgICAgICAidGltZXN0YW1wIjogIjIw
+MTUtMDktMTFUMjA6MzI6MzMuOTM2WiIsCiAgICAgICAgICAicHJvY2Vzc2luZ1RpbWVNaWxsaXMi
+OiAyMjIsCiAgICAgICAgICAicmVjaXBpZW50cyI6IFsKICAgICAgICAgICAgInJlY2lwaWVudEBl
+eGFtcGxlLmNvbSIKICAgICAgICAgIF0sCiAgICAgICAgICAic3BhbVZlcmRpY3QiOiB7CiAgICAg
+ICAgICAgICJzdGF0dXMiOiAiUEFTUyIKICAgICAgICAgIH0sCiAgICAgICAgICAidmlydXNWZXJk
+aWN0IjogewogICAgICAgICAgICAic3RhdHVzIjogIlBBU1MiCiAgICAgICAgICB9LAogICAgICAg
+ICAgInNwZlZlcmRpY3QiOiB7CiAgICAgICAgICAgICJzdGF0dXMiOiAiUEFTUyIKICAgICAgICAg
+IH0sCiAgICAgICAgICAiZGtpbVZlcmRpY3QiOiB7CiAgICAgICAgICAgICJzdGF0dXMiOiAiUEFT
+UyIKICAgICAgICAgIH0sCiAgICAgICAgICAiZG1hcmNWZXJkaWN0IjogewogICAgICAgICAgICAi
+c3RhdHVzIjogIlBBU1MiCiAgICAgICAgICB9LAogICAgICAgICAgImRtYXJjUG9saWN5IjogInJl
+amVjdCIsCiAgICAgICAgICAiYWN0aW9uIjogewogICAgICAgICAgICAidHlwZSI6ICJTTlMiLAog
+ICAgICAgICAgICAidG9waWNBcm4iOiAiYXJuOmF3czpzbnM6dXMtZWFzdC0xOjAxMjM0NTY3ODkx
+MjpleGFtcGxlLXRvcGljIgogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgIm1haWwiOiB7
+CiAgICAgICAgICAidGltZXN0YW1wIjogIjIwMTUtMDktMTFUMjA6MzI6MzMuOTM2WiIsCiAgICAg
+ICAgICAic291cmNlIjogIjYxOTY3MjMwLTdBNDUtNEE5RC1CRUM5LTg3Q0JDRjIyMTFDOUBleGFt
+cGxlLmNvbSIsCiAgICAgICAgICAibWVzc2FnZUlkIjogImQ2aWl0b2JrNzV1cjQ0cDhrZG5ucDdn
+Mm44MDAiLAogICAgICAgICAgImRlc3RpbmF0aW9uIjogWwogICAgICAgICAgICAicmVjaXBpZW50
+QGV4YW1wbGUuY29tIgogICAgICAgICAgXSwKICAgICAgICAgICJoZWFkZXJzVHJ1bmNhdGVkIjog
+ZmFsc2UsCiAgICAgICAgICAiaGVhZGVycyI6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAg
+ICJuYW1lIjogIlJldHVybi1QYXRoIiwKICAgICAgICAgICAgICAidmFsdWUiOiAiPDAwMDAwMTRm
+YmUxYzA5Y2YtN2NiOWY3MDQtNzUzMS00ZTUzLTg5YTEtNWZhOTc0NGY1ZWI2LTAwMDAwMEBhbWF6
+b25zZXMuY29tPiIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICJu
+YW1lIjogIlJlY2VpdmVkIiwKICAgICAgICAgICAgICAidmFsdWUiOiAiZnJvbSBhOS0xODMuc210
+cC1vdXQuYW1hem9uc2VzLmNvbSAoYTktMTgzLnNtdHAtb3V0LmFtYXpvbnNlcy5jb20gWzU0LjI0
+MC45LjE4M10pIGJ5IGluYm91bmQtc210cC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbSB3aXRoIFNN
+VFAgaWQgZDZpaXRvYms3NXVyNDRwOGtkbm5wN2cybjgwMCBmb3IgcmVjaXBpZW50QGV4YW1wbGUu
+Y29tOyBGcmksIDExIFNlcCAyMDE1IDIwOjMyOjMzICswMDAwIChVVEMpIgogICAgICAgICAgICB9
+LAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgIm5hbWUiOiAiREtJTS1TaWduYXR1cmUiLAog
+ICAgICAgICAgICAgICJ2YWx1ZSI6ICJ2PTE7IGE9cnNhLXNoYTI1NjsgcT1kbnMvdHh0OyBjPXJl
+bGF4ZWQvc2ltcGxlOyBzPXVnN25idGY0Z2NjbWxwd2ozMjJheDNwNm93Nnlmc3VnOyBkPWFtYXpv
+bnNlcy5jb207IHQ9MTQ0MjAwMzU1MjsgaD1Gcm9tOlRvOlN1YmplY3Q6TUlNRS1WZXJzaW9uOkNv
+bnRlbnQtVHlwZTpDb250ZW50LVRyYW5zZmVyLUVuY29kaW5nOkRhdGU6TWVzc2FnZS1JRDpGZWVk
+YmFjay1JRDsgYmg9RFdyM0lPbVlXb1hDQTlBUnFHQy9VYU9EZmdoZmZpd0ZOUkliMk1ja3l0ND07
+IGI9cDR1a1VEU0ZxaHFpdWIrelBSMERXMWtwN29KWmFrcnp1cHI2TEJlNnNVdXZxcEJraWc1NlV6
+VXdjMjlyRmJKRiBobFgzT3Y3RGVZVk5vTjM4c3Rxd3NGOGl2Y2FqWHBRc1hSQzFjVzl6OHg4NzVK
+MDQxckNsQWpWN0VHYkxtdWRWcFBYIDRoSHN0MVhQeVg1d21nZEhJaG1VdWg4b1pLcFZxR2k2YkhH
+enpmN2c9IgogICAgICAgICAgICB9LAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgIm5hbWUi
+OiAiRnJvbSIsCiAgICAgICAgICAgICAgInZhbHVlIjogInNlbmRlckBleGFtcGxlLmNvbSIKICAg
+ICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICJuYW1lIjogIlRvIiwKICAg
+ICAgICAgICAgICAidmFsdWUiOiAicmVjaXBpZW50QGV4YW1wbGUuY29tIgogICAgICAgICAgICB9
+LAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgIm5hbWUiOiAiU3ViamVjdCIsCiAgICAgICAg
+ICAgICAgInZhbHVlIjogIkV4YW1wbGUgc3ViamVjdCIKICAgICAgICAgICAgfSwKICAgICAgICAg
+ICAgewogICAgICAgICAgICAgICJuYW1lIjogIk1JTUUtVmVyc2lvbiIsCiAgICAgICAgICAgICAg
+InZhbHVlIjogIjEuMCIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAg
+ICJuYW1lIjogIkNvbnRlbnQtVHlwZSIsCiAgICAgICAgICAgICAgInZhbHVlIjogInRleHQvcGxh
+aW47IGNoYXJzZXQ9VVRGLTgiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAg
+ICAgICAibmFtZSI6ICJDb250ZW50LVRyYW5zZmVyLUVuY29kaW5nIiwKICAgICAgICAgICAgICAi
+dmFsdWUiOiAiN2JpdCIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAg
+ICJuYW1lIjogIkRhdGUiLAogICAgICAgICAgICAgICJ2YWx1ZSI6ICJGcmksIDExIFNlcCAyMDE1
+IDIwOjMyOjMyICswMDAwIgogICAgICAgICAgICB9LAogICAgICAgICAgICB7CiAgICAgICAgICAg
+ICAgIm5hbWUiOiAiTWVzc2FnZS1JRCIsCiAgICAgICAgICAgICAgInZhbHVlIjogIjw2MTk2NzIz
+MC03QTQ1LTRBOUQtQkVDOS04N0NCQ0YyMjExQzlAZXhhbXBsZS5jb20+IgogICAgICAgICAgICB9
+LAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgIm5hbWUiOiAiWC1TRVMtT3V0Z29pbmciLAog
+ICAgICAgICAgICAgICJ2YWx1ZSI6ICIyMDE1LjA5LjExLTU0LjI0MC45LjE4MyIKICAgICAgICAg
+ICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICJuYW1lIjogIkZlZWRiYWNrLUlEIiwK
+ICAgICAgICAgICAgICAidmFsdWUiOiAiMS51cy1lYXN0LTEuS3J2MkZLcEZkV1YrS1VZdzNRZDZ3
+Y3BQSjRTdi9wT1BwRVBTSG4ydTJvND06QW1hem9uU0VTIgogICAgICAgICAgICB9CiAgICAgICAg
+ICBdLAogICAgICAgICAgImNvbW1vbkhlYWRlcnMiOiB7CiAgICAgICAgICAgICJyZXR1cm5QYXRo
+IjogIjAwMDAwMTRmYmUxYzA5Y2YtN2NiOWY3MDQtNzUzMS00ZTUzLTg5YTEtNWZhOTc0NGY1ZWI2
+LTAwMDAwMEBhbWF6b25zZXMuY29tIiwKICAgICAgICAgICAgImZyb20iOiBbCiAgICAgICAgICAg
+ICAgInNlbmRlckBleGFtcGxlLmNvbSIKICAgICAgICAgICAgXSwKICAgICAgICAgICAgImRhdGUi
+OiAiRnJpLCAxMSBTZXAgMjAxNSAyMDozMjozMiArMDAwMCIsCiAgICAgICAgICAgICJ0byI6IFsK
+ICAgICAgICAgICAgICAicmVjaXBpZW50QGV4YW1wbGUuY29tIgogICAgICAgICAgICBdLAogICAg
+ICAgICAgICAibWVzc2FnZUlkIjogIjw2MTk2NzIzMC03QTQ1LTRBOUQtQkVDOS04N0NCQ0YyMjEx
+QzlAZXhhbXBsZS5jb20+IiwKICAgICAgICAgICAgInN1YmplY3QiOiAiRXhhbXBsZSBzdWJqZWN0
+IgogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfSwKICAgICAgImV2ZW50U291cmNlIjogImF3
+czpzZXMiCiAgICB9CiAgXQp9Cg==
+
+--66ac1f98_327b23c6_10290--
+
