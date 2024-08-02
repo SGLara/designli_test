@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmailParserController;
 use App\Http\Controllers\JsonMapperController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/json-mapper', JsonMapperController::class);
+Route::post('json-mapper', JsonMapperController::class);
+Route::post('email-parser', EmailParserController::class);
