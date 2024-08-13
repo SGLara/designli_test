@@ -1,64 +1,64 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Designli Test
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This is a Laravel project that includes a Mail Parser and JSON mapper functionality. Follow the steps below to set up the project and understand how to use its features.
 
-## About Laravel
+## Installation
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+To get started with the project, follow these steps:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/SGLara/designli_test
+    cd designli_test
+    ```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+2. **Install dependencies**:
+    ```bash
+    composer install
+    ```
 
-## Learning Laravel
+3. **Copy the `.env` file**:
+    ```bash
+    cp .env.example .env
+    ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+4. **Generate the Laravel application key**:
+    ```bash
+    php artisan key:generate
+    ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+5. **Start the local development server**:
+    ```bash
+    php artisan serve
+    ```
 
-## Laravel Sponsors
+## Features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### 1. Mail Parser
 
-### Premium Partners
+The Mail Parser functionality allows you to parse `.eml` files via an API route.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- **Endpoint**: `/api/email-parser`
+- **Method**: `POST`
+- **Parameters**:
+  - `file` (required): The `.eml` file to be parsed.
+- **Usage**: Upload the `.eml` file to the API endpoint using a tool like Postman or cURL.
+- **Response**: The API will parse the file and return the relevant email data attachments.
 
-## Contributing
+> Note: You can use the file located in the `tests/fixtures/email-test.eml` file for testing purposes. You can use a client like Postman or cURL to send the `.eml` file to the API endpoint.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 2. JSON Mapper
 
-## Code of Conduct
+The JSON Mapper functionality is designed to process AWS SES (Simple Email Service) SNS (Simple Notification Service) notifications.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **Endpoint:** `/api/json-mapper` 
+- **Method:** `POST`
+- **Parameters:**
+  - `json` (required): The JSON body containing the AWS SES SNS notification.
+- **Usage**: Send a POST request to the API endpoint with the JSON body containing the AWS SES SNS notification.
+- **Response**: The API will process the JSON body and return a simplified object containing only the most important information from the notification.
 
-## Security Vulnerabilities
+> Note: You can use the file located in the `tests/fixtures/sns-example.json` file for testing purposes. You can use a client like Postman or cURL to send the JSON body to the API endpoint.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+Thanks for reading! If you have any questions or feedback, please don't hesitate to reach me out.
