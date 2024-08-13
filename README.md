@@ -32,6 +32,10 @@ To get started with the project, follow these steps:
     php artisan serve
     ```
 
+## API Documentation
+
+> You can find the documentation for the project once the project is running by visiting the `/docs` route.
+
 ## Features
 
 ### 1. Mail Parser
