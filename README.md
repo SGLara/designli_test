@@ -61,4 +61,4 @@ The JSON Mapper functionality is designed to process AWS SES (Simple Email Servi
 > Note: You can use the file located in the `tests/fixtures/sns-example.json` file for testing purposes. You can use a client like Postman or cURL to send the JSON body to the API endpoint.
 
 ---
-Thanks for reading! If you have any questions or feedback, please don't hesitate to reach me out.
+Thanks for reading! If you have any questions or feedback, please don't hesitate to reach me out at [steven.gustavo.lara@gmail.com](mailto:steven.gustavo.lara@gmail.com).
