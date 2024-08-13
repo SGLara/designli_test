@@ -12,6 +12,15 @@ class EmailParserController extends Controller
         private EmailParserService $emailParserService
     ) {} //phpcs:ignore
 
+    /**
+     * @group Email Parser
+     *
+     * Email Parser Function
+     *
+     * This functionality allows you to parse `.eml` files via an API route.
+     *
+     * @bodyParam file file required The `.eml` file to be parsed. Example: tests/fixtures/email-test.eml
+     */
     public function __invoke(EmailRequest $request)
     {
         $file = $request->file('file');

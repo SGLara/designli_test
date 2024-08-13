@@ -13,6 +13,14 @@ class JsonMapperController extends Controller
         private JsonMapperInterface $jsonMapper
     ) {} // phpcs:ignore
 
+    /**
+     * @group Json Mapper
+     *
+     * Json Mapper Function
+     *
+     * This functionality is designed to process AWS SES (Simple Email Service)
+     * SNS (Simple Notification Service) notifications.
+     */
     public function __invoke(JsonObjectRequest $request): EmailRecordResource
     {
         $data = $this->jsonMapper->mapToCollectionFromString(

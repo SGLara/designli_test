@@ -26,6 +26,7 @@ class JsonObjectRequest extends FormRequest
         return [
             'Records' => ['required', 'array'],
             'Records.*.eventVersion' => ['required', 'string'],
+            'Records.*.eventSource' => ['required', 'string'],
             'Records.*.ses.receipt.timestamp' => ['required', 'date'],
             'Records.*.ses.receipt.processingTimeMillis' => ['required', 'integer'],
             'Records.*.ses.receipt.recipients' => ['required', 'array'],

@@ -1,0 +1,246 @@
+openapi: 3.0.3
+info:
+  title: 'Designli Test API Documentation'
+  description: 'This is a simple API documentation for testing purposes.'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost:8000'
+paths:
+  /api/email-parser:
+    post:
+      summary: "Email Parser Function\n\nThis functionality allows you to parse `.eml` files via an API route."
+      operationId: emailParserFunctionThisFunctionalityAllowsYouToParseemlFilesViaAnAPIRoute
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Email Parser'
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: 'The `.eml` file to be parsed.'
+              required:
+                - file
+      security: []
+  /api/json-mapper:
+    post:
+      summary: "Json Mapper Function\n\nThis functionality is designed to process AWS SES (Simple Email Service)\nSNS (Simple Notification Service) notifications."
+      operationId: jsonMapperFunctionThisFunctionalityIsDesignedToProcessAWSSESSimpleEmailServiceSNSSimpleNotificationServiceNotifications
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Json Mapper'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Records:
+                  type: array
+                  description: ''
+                  example:
+                    - []
+                  items:
+                    type: object
+                    properties:
+                      eventVersion:
+                        type: string
+                        description: ''
+                        example: qui
+                      eventSource:
+                        type: string
+                        description: ''
+                        example: commodi
+                      ses:
+                        type: object
+                        description: ''
+                        example: []
+                        properties:
+                          receipt:
+                            type: object
+                            description: ''
+                            example: []
+                            properties:
+                              timestamp:
+                                type: string
+                                description: 'Must be a valid date.'
+                                example: '2024-08-13T17:57:05'
+                              processingTimeMillis:
+                                type: integer
+                                description: ''
+                                example: 18
+                              recipients:
+                                type: array
+                                description: 'Must be a valid email address.'
+                                example:
+                                  - imuller@example.org
+                                items:
+                                  type: string
+                              spamVerdict:
+                                type: object
+                                description: ''
+                                example: []
+                                properties:
+                                  status:
+                                    type: string
+                                    description: ''
+                                    example: et
+                              virusVerdict:
+                                type: object
+                                description: ''
+                                example: []
+                                properties:
+                                  status:
+                                    type: string
+                                    description: ''
+                                    example: nam
+                              spfVerdict:
+                                type: object
+                                description: ''
+                                example: []
+                                properties:
+                                  status:
+                                    type: string
+                                    description: ''
+                                    example: corrupti
+                              dkimVerdict:
+                                type: object
+                                description: ''
+                                example: []
+                                properties:
+                                  status:
+                                    type: string
+                                    description: ''
+                                    example: et
+                              dmarcVerdict:
+                                type: object
+                                description: ''
+                                example: []
+                                properties:
+                                  status:
+                                    type: string
+                                    description: ''
+                                    example: dolores
+                              dmarcPolicy:
+                                type: string
+                                description: ''
+                                example: voluptatem
+                              action:
+                                type: object
+                                description: ''
+                                example: []
+                                properties:
+                                  type:
+                                    type: string
+                                    description: ''
+                                    example: omnis
+                                  topicArn:
+                                    type: string
+                                    description: ''
+                                    example: impedit
+                          mail:
+                            type: object
+                            description: ''
+                            example: []
+                            properties:
+                              timestamp:
+                                type: string
+                                description: 'Must be a valid date.'
+                                example: '2024-08-13T17:57:05'
+                              source:
+                                type: string
+                                description: 'Must be a valid email address.'
+                                example: walter.jerry@example.net
+                              messageId:
+                                type: string
+                                description: ''
+                                example: voluptatem
+                              destination:
+                                type: array
+                                description: 'Must be a valid email address.'
+                                example:
+                                  - luettgen.annalise@example.com
+                                items:
+                                  type: string
+                              headersTruncated:
+                                type: boolean
+                                description: ''
+                                example: false
+                              headers:
+                                type: array
+                                description: ''
+                                example:
+                                  - []
+                                items:
+                                  type: object
+                                  properties:
+                                    name:
+                                      type: string
+                                      description: ''
+                                      example: exercitationem
+                                    value:
+                                      type: string
+                                      description: ''
+                                      example: dolorem
+                                  required:
+                                    - name
+                                    - value
+                              commonHeaders:
+                                type: object
+                                description: ''
+                                example: []
+                                properties:
+                                  returnPath:
+                                    type: string
+                                    description: 'Must be a valid email address.'
+                                    example: layla.hermiston@example.net
+                                  from:
+                                    type: array
+                                    description: 'Must be a valid email address.'
+                                    example:
+                                      - tledner@example.org
+                                    items:
+                                      type: string
+                                  date:
+                                    type: string
+                                    description: 'Must be a valid date.'
+                                    example: '2024-08-13T17:57:05'
+                                  to:
+                                    type: array
+                                    description: 'Must be a valid email address.'
+                                    example:
+                                      - macie.boyle@example.org
+                                    items:
+                                      type: string
+                                  messageId:
+                                    type: string
+                                    description: ''
+                                    example: illo
+                                  subject:
+                                    type: string
+                                    description: ''
+                                    example: et
+                    required:
+                      - eventVersion
+                      - eventSource
+              required:
+                - Records
+      security: []
+tags:
+  -
+    name: 'Email Parser'
+    description: ''
+  -
+    name: 'Json Mapper'
+    description: ''

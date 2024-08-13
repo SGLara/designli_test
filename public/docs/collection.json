@@ -1,0 +1,102 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost:8000"
+        }
+    ],
+    "info": {
+        "name": "Designli Test API Documentation",
+        "_postman_id": "1099d5e6-9e8c-40d9-9ce6-d130b0ea9eb8",
+        "description": "This is a simple API documentation for testing purposes.",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Email Parser",
+            "description": "",
+            "item": [
+                {
+                    "name": "Email Parser Function\n\nThis functionality allows you to parse `.eml` files via an API route.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/email-parser",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/email-parser"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "file",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Json Mapper",
+            "description": "",
+            "item": [
+                {
+                    "name": "Json Mapper Function\n\nThis functionality is designed to process AWS SES (Simple Email Service)\nSNS (Simple Notification Service) notifications.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/json-mapper",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/json-mapper"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"Records\":[{\"eventVersion\":\"qui\",\"eventSource\":\"commodi\",\"ses\":{\"receipt\":{\"timestamp\":\"2024-08-13T17:57:05\",\"processingTimeMillis\":18,\"recipients\":[\"imuller@example.org\"],\"spamVerdict\":{\"status\":\"et\"},\"virusVerdict\":{\"status\":\"nam\"},\"spfVerdict\":{\"status\":\"corrupti\"},\"dkimVerdict\":{\"status\":\"et\"},\"dmarcVerdict\":{\"status\":\"dolores\"},\"dmarcPolicy\":\"voluptatem\",\"action\":{\"type\":\"omnis\",\"topicArn\":\"impedit\"}},\"mail\":{\"timestamp\":\"2024-08-13T17:57:05\",\"source\":\"walter.jerry@example.net\",\"messageId\":\"voluptatem\",\"destination\":[\"luettgen.annalise@example.com\"],\"headersTruncated\":false,\"headers\":[{\"name\":\"exercitationem\",\"value\":\"dolorem\"}],\"commonHeaders\":{\"returnPath\":\"layla.hermiston@example.net\",\"from\":[\"tledner@example.org\"],\"date\":\"2024-08-13T17:57:05\",\"to\":[\"macie.boyle@example.org\"],\"messageId\":\"illo\",\"subject\":\"et\"}}}}]}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
